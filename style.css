@@ -19,7 +19,7 @@ Text Domain: planet4-child-theme-canada
 
 
 /* Styles for FUNDRAISE button in top navigation: copy styles of DONATE button */
-ul#navbar-dropdown.navbar-dropdown.list-unstyled:nth-child(5) a {
+a.nav-link:nth-of-type(5n) {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 text-rendering: optimizeLegibility;
 -webkit-font-smoothing: antialiased;
