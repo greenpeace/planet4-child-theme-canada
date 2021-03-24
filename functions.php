@@ -11,3 +11,6 @@ function enqueue_child_styles() {
 
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', [], $css_creation );
 }
+
+// Filter available Gutenberg standard blocks
+require_once( 'includes/gutenberg-blocks.php' );
