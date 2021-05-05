@@ -54,5 +54,7 @@
 	{% if (og_image_data) %}
 		<meta name="twitter:image" content="{{ og_image_data['url'] }}" />
 	{% endif %}
-{% endif %}
-<meta name="facebook-domain-verification" content="q7pdwapgfef7gsz1dqsq5apfp1l1b6" />
+    {% endif %}
+    {% if fn('is_front_page') %}
+    <meta name="facebook-domain-verification" content="q7pdwapgfef7gsz1dqsq5apfp1l1b6" />
+    {% endif %}
