@@ -12,7 +12,317 @@ Tags: light, accessibility-ready
 Text Domain: planet4-child-theme-canada
 */
 
-/*
-	Display which theme is active right now in bottom right corner
-	See also planet4-child-theme-canada. Feel free to drop or hide display
-*/
+/* step number colors */
+.can-do-steps .step-number, .can-do-steps-mobile .card-header {
+  background-color: #007799;
+  cursor: default;
+}
+
+.can-do-steps .step-number:hover,.can-do-steps .step-number.active {
+  background-color: #074365;
+  cursor: default;
+}
+
+.can-do-steps{
+  cursor: default;
+}
+
+/* decrease the space after the header in large screen */
+@media (min-width: 1200px) {
+  .page-header {
+    padding: 144px 0 20px;
+  }
+}
+
+/* Display the header description on mobile */
+@media (max-width:768px) {
+  .page-header-content {
+    display:block;
+  }
+}
+
+/* In posts: Display images inline two by two */
+.blocktwoimage {
+  display: inline-block;
+}
+
+/* In posts: Display videos inline two by two with description text */
+.video2col {
+  width: 48%;
+  font-size: 0.8em;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* used on Lac Simon page */
+.video2col2 {
+  width: 48%;
+  font-size: 0.8em;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  height: 0;
+  padding-bottom: 25%;
+  margin-top: 30px;
+}
+
+.frame100 {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+}
+
+.text2col2 {
+  position: absolute;
+  bottom: -20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .video2col {
+    width: 100%;
+    font-size: 0.8em;
+    display: block;
+  }
+}
+
+.text2col {
+  display: inline-block; padding-bottom: 20px;
+}
+
+/* Donate Button - Header */
+.btn-donate {
+  background-color: #f36d3a!important;
+  color: white!important;
+}
+
+.btn-donate:hover {
+  background-color: #ee562d!important;
+  color: white!important;
+}
+
+/* Buttons: Display buttons inline two by two with description text */
+.btncol {
+  width: auto;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* added a div to allow full width images in columns page element */
+.enlargeimg .columns-block.block-style-icons .column-wrap img {
+  width: 100%;
+  height: auto;
+}
+
+/* change style of links to button ( page elements: columns icons) */
+.call-to-action-link {
+  background-color: rgba(255,255,255,.3);
+  border: solid 1px #074365!important;
+  color: #074365 !important;
+  padding: 10px 30px;
+}
+
+.action-box {
+  margin-bottom: 30px;
+  padding: 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  background: rgb(253, 251,  246);
+}
+
+.inline-step-number {
+  display: inline-block;
+  background: #074365;
+  width: 126px;
+  height: 126px;
+  font-size: 4.375rem;
+  line-height: 114px;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 30px;
+  margin-bottom: 15px;
+}
+
+.inline-step-number-inner {
+  display: inline-block;
+  background: #074365;
+  border: 2px solid #86eee7;
+  border-radius: 50%;
+  font-family: Roboto,sans-serif;
+  color: #ffffff;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+}
+
+@media (max-width: 512px) {
+  .inline-step-number {
+    display: block;
+  }
+}
+
+/* Fixes for Gutenberg */
+.columns-block .card-header {
+  display: block;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .columns-block.block-style-icons .column-wrap p {
+    margin-bottom: 45px;
+  }
+}
+
+.a-button-list {
+  text-align: center;
+  margin: 50px auto 0;
+  padding-bottom: 5px;
+  max-width: 700px;
+}
+
+.a-button-list a {
+  margin-top: 5px;
+  min-width: 230px;
+  font-size: small;
+  width: auto;
+  margin-bottom: 0;
+}
+
+.btn-donate {
+  text-transform: uppercase;
+}
+
+/* Fundraise button styles */
+.fundraise {
+  line-height: 1;
+  height: 60px;
+}
+
+.fundraise:hover,
+.fundraise:focus {
+  border-bottom: none !important;
+  border: none;
+}
+
+.fundraise a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-box-direction: normal;
+  list-style: none;
+  list-style-type: none;
+  hyphens: none;
+  box-sizing: border-box;
+  background-color: #f36d3a!important;
+  color: white!important;
+  display: inline-block;
+  position: relative;
+  font-family: Roboto,sans-serif;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  appearance: none;
+  transition-property: color,background-color,border-color;
+  transition-duration: .15s;
+  transition-timing-function: linear;
+  line-height: 1.65;
+  min-width: 180px !important;
+  margin: 0;
+  padding: 3px 30px !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,.25);
+  font-size: 1.25rem;
+  margin-top: 10px;
+  height: 40px;
+  text-transform: uppercase;
+  border-bottom: none !important;
+}
+
+.fundraise a:hover,
+.fundraise a:focus {
+  border-bottom: none !important;
+  background-color: #E75A24 !important;
+}
+
+@media (min-width: 992px) {
+  .nav-item.wpml-ls-item {
+    margin-left: 0;
+  }
+
+  .navbar-dropdown {
+    box-sizing: border-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 0px 60px 0px 60px;
+    background: rgba(7,67,101,.8) url(../../images/dropdown-gradient.svg) no-repeat;
+    z-index: 2;
+  }
+}
+
+@media(max-width: 1200px) {
+  .page-header > .container {
+    margin-top: 80px;
+  }
+}
+
+@media(max-width: 1199px) {
+  .navbar-dropdown {
+    flex-wrap: wrap;
+  }
+}
+
+@media(max-width: 991px) {
+  .navbar-dropdown {
+    flex-wrap: unset;
+  }
+  .admin-bar .top-navigation {
+    padding: 50px 0px;
+  }
+  .navbar-dropdown .nav-link {
+    line-height: 1.5;
+    height: 60px;
+  }
+  .fundraise .nav-link {
+    height: 40px;
+    line-height: 2.5;
+  }
+  .fundraise a{
+    padding: 0px 30px !important;
+  }
+}
+
+.emdedded-content iframe {
+  max-width: 100%;
+}
+
+.center-this {
+  display: block;
+  margin: 0 auto;
+}
+
+button:focus,
+a:focus {
+  border: 1px solid #FFFFFF !important;
+}
+
+.wp-block-button,
+.btn {
+  text-transform: uppercase;
+}
+
+/* Let's try to avoid having the footer wrap into multiple lines */
+.site-footer .container {
+  max-width: 100%;
+}
