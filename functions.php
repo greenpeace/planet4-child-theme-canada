@@ -1,14 +1,14 @@
 <?php
 
 add_action('wp_enqueue_scripts', 'enqueue_child_styles', 99);
-add_action('wp_head', 'hook_javascript');
+add_action('wp_head', 'include_fundraiseup_script');
 
 function enqueue_child_styles() {
 	$css_creation = filectime(get_stylesheet_directory() . '/style.css');
 	wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/style.css', [], $css_creation);
 }
 
-function hook_javascript() {
+function include_fundraiseup_script() {
 ?>
 <!-- Begin Fundraise Up -->
 <script>(function(w,d,s,n,a){if(!w[n]){var l='call,catch,on,once,set,then,track'
